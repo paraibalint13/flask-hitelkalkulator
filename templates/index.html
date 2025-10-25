@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Hitelkalkulátor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Hitelkalkulátor</h1>
+    <form action="/kalkulal" method="post">
+        <label>Hitel összege (Ft):</label>
+        <input type="number" name="osszeg" step="1000" required>
+
+        <label>Futamidő (év):</label>
+        <input type="number" name="ev" required>
+
+        <label>Kamat (%):</label>
+        <input type="number" name="kamat" step="0.01" required>
+
+        <button type="submit">Számítás</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Eredmény</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Eredmény</h1>
+    <p class="result">A havi törlesztőrészlet: <strong>{{ "{:,.0f}".format(havi_torleszto).replace(",", " ") }} Ft</strong></p>
+    <a href="/">Vissza a kalkulátorhoz</a>
+  </div>
+</body>
+</html>
